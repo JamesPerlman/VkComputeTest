@@ -7,8 +7,13 @@
 
 #include <iostream>
 
+#include "VulkanComputeApplication.hpp"
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    auto application = VulkanComputeApplication();
+    application.run();
+    
     return 0;
 }

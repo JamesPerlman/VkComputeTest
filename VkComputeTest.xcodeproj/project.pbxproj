@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1AE63DFB27246D170035735A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AE63DFA27246D170035735A /* main.cpp */; };
+		1AE63E08272482930035735A /* libvulkan.1.2.189.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE63E06272482930035735A /* libvulkan.1.2.189.dylib */; };
+		1AE63E09272482930035735A /* libvulkan.1.2.189.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1AE63E06272482930035735A /* libvulkan.1.2.189.dylib */; };
+		1AE63E0A272482930035735A /* libvulkan.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE63E07272482930035735A /* libvulkan.1.dylib */; };
+		1AE63E0B272482930035735A /* libvulkan.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1AE63E07272482930035735A /* libvulkan.1.dylib */; };
+		1AE63E0F272489EC0035735A /* VulkanDebugUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AE63E0D272489EC0035735A /* VulkanDebugUtils.cpp */; };
+		1AE63E1227248C590035735A /* VulkanComputeApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AE63E1027248C590035735A /* VulkanComputeApplication.cpp */; };
+		1AE63E132724F7450035735A /* libvulkan.1.2.189.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1AE63E06272482930035735A /* libvulkan.1.2.189.dylib */; };
+		1AE63E142724F7450035735A /* libvulkan.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1AE63E07272482930035735A /* libvulkan.1.dylib */; };
+		1AE63E182725030C0035735A /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AE63E162725030C0035735A /* FileUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -17,14 +26,41 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
+				1AE63E132724F7450035735A /* libvulkan.1.2.189.dylib in CopyFiles */,
+				1AE63E142724F7450035735A /* libvulkan.1.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1AE63E0C272482930035735A /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AE63E0B272482930035735A /* libvulkan.1.dylib in Embed Libraries */,
+				1AE63E09272482930035735A /* libvulkan.1.2.189.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AE63DF727246D170035735A /* VkComputeTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VkComputeTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE63DFA27246D170035735A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1AE63E0127246D590035735A /* setup-env.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "setup-env.sh"; sourceTree = "<group>"; };
+		1AE63E04272470E00035735A /* simple.comp */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; path = simple.comp; sourceTree = "<group>"; };
+		1AE63E06272482930035735A /* libvulkan.1.2.189.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvulkan.1.2.189.dylib; path = ../../../../../Library/Developer/VulkanSDK/1.2.189.0/macOS/lib/libvulkan.1.2.189.dylib; sourceTree = "<group>"; };
+		1AE63E07272482930035735A /* libvulkan.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvulkan.1.dylib; path = ../../../../../Library/Developer/VulkanSDK/1.2.189.0/macOS/lib/libvulkan.1.dylib; sourceTree = "<group>"; };
+		1AE63E0D272489EC0035735A /* VulkanDebugUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VulkanDebugUtils.cpp; sourceTree = "<group>"; };
+		1AE63E0E272489EC0035735A /* VulkanDebugUtils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VulkanDebugUtils.hpp; sourceTree = "<group>"; };
+		1AE63E1027248C590035735A /* VulkanComputeApplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VulkanComputeApplication.cpp; sourceTree = "<group>"; };
+		1AE63E1127248C590035735A /* VulkanComputeApplication.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VulkanComputeApplication.hpp; sourceTree = "<group>"; };
+		1AE63E152724F7B00035735A /* VkComputeTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VkComputeTest.entitlements; sourceTree = "<group>"; };
+		1AE63E162725030C0035735A /* FileUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
+		1AE63E172725030C0035735A /* FileUtils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileUtils.hpp; sourceTree = "<group>"; };
+		1AE63E1927261BA00035735A /* VkComputeSample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VkComputeSample.cpp; sourceTree = "<group>"; };
+		1AE63E1A27261BA00035735A /* VkComputeSample.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VkComputeSample.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE63E0A272482930035735A /* libvulkan.1.dylib in Frameworks */,
+				1AE63E08272482930035735A /* libvulkan.1.2.189.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +79,11 @@
 		1AE63DEE27246D170035735A = {
 			isa = PBXGroup;
 			children = (
+				1AE63E0127246D590035735A /* setup-env.sh */,
+				1AE63E03272470D50035735A /* shaders */,
 				1AE63DF927246D170035735A /* VkComputeTest */,
 				1AE63DF827246D170035735A /* Products */,
+				1AE63E05272482930035735A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +98,35 @@
 		1AE63DF927246D170035735A /* VkComputeTest */ = {
 			isa = PBXGroup;
 			children = (
+				1AE63E152724F7B00035735A /* VkComputeTest.entitlements */,
 				1AE63DFA27246D170035735A /* main.cpp */,
+				1AE63E1027248C590035735A /* VulkanComputeApplication.cpp */,
+				1AE63E1127248C590035735A /* VulkanComputeApplication.hpp */,
+				1AE63E0D272489EC0035735A /* VulkanDebugUtils.cpp */,
+				1AE63E0E272489EC0035735A /* VulkanDebugUtils.hpp */,
+				1AE63E162725030C0035735A /* FileUtils.cpp */,
+				1AE63E172725030C0035735A /* FileUtils.hpp */,
+				1AE63E1927261BA00035735A /* VkComputeSample.cpp */,
+				1AE63E1A27261BA00035735A /* VkComputeSample.hpp */,
 			);
 			path = VkComputeTest;
+			sourceTree = "<group>";
+		};
+		1AE63E03272470D50035735A /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				1AE63E04272470E00035735A /* simple.comp */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		1AE63E05272482930035735A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AE63E06272482930035735A /* libvulkan.1.2.189.dylib */,
+				1AE63E07272482930035735A /* libvulkan.1.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AE63DFE27246D170035735A /* Build configuration list for PBXNativeTarget "VkComputeTest" */;
 			buildPhases = (
+				1AE63E0227246DB50035735A /* Compile Shaders */,
 				1AE63DF327246D170035735A /* Sources */,
-				1AE63DF427246D170035735A /* Frameworks */,
 				1AE63DF527246D170035735A /* CopyFiles */,
+				1AE63DF427246D170035735A /* Frameworks */,
+				1AE63E0C272482930035735A /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -113,12 +182,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AE63E0227246DB50035735A /* Compile Shaders */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Shaders";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source \"$SRCROOT/setup-env.sh\"\nexport SHADER_IN_DIR=\"$SRCROOT/shaders\"\nexport SHADER_OUT_DIR=\"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH/shaders\"\n\nmkdir -p \"$SHADER_OUT_DIR\"\n\n# loop through $SHADER_IN_DIR and compile all shaders\ncd $SHADER_IN_DIR\nfor SHADER_FILE in ./*\ndo\n    \"$VULKAN_SDK/bin/glslc\" \"$SHADER_FILE\" -o \"$SHADER_OUT_DIR/${SHADER_FILE##*/}\"\n    echo \"$SHADER_OUT_DIR/${SHADER_FILE##*/}\"\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AE63DF327246D170035735A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1AE63DFB27246D170035735A /* main.cpp in Sources */,
+				1AE63E1227248C590035735A /* VulkanComputeApplication.cpp in Sources */,
+				1AE63E0F272489EC0035735A /* VulkanDebugUtils.cpp in Sources */,
+				1AE63E182725030C0035735A /* FileUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,20 +332,42 @@
 		1AE63DFF27246D170035735A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NK34BJQZ4;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = VkComputeTest/VkComputeTest.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Library/Developer/VulkanSDK/1.2.189.0/macOS/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Library/Developer/VulkanSDK/1.2.189.0/macOS/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		1AE63E0027246D170035735A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6NK34BJQZ4;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = VkComputeTest/VkComputeTest.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Library/Developer/VulkanSDK/1.2.189.0/macOS/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Library/Developer/VulkanSDK/1.2.189.0/macOS/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
